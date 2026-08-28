@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bonsai — JSON Tree Viewer</title>
+<meta name="description" content="A read-only, editor-style JSON viewer for Chrome. Structure tree, full-document search, dark and light themes. Everything runs locally.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <img class="hero-mark" src="favicon.svg" alt="Bonsai logo">
+    <h1>Bonsai</h1>
+    <p class="tagline">JSON Tree Viewer</p>
+    <p class="lede">
+      Raw JSON in a browser tab is a wall of text. Bonsai turns it into the view you would
+      get from opening the file in a desktop code editor — folding, a structure tree,
+      real search — without leaving the tab.
+    </p>
+    <div class="actions">
+      <!-- TODO: once the listing is live, swap href for the Web Store URL and drop
+           aria-disabled + the "coming soon" wording. -->
+      <a class="btn btn-primary" aria-disabled="true" href="#">Coming to the Chrome Web Store</a>
+      <a class="btn" href="privacy.html">Privacy policy</a>
+    </div>
+  </header>
+
+  <h2>What it does</h2>
+  <div class="card">
+    <ul class="features">
+      <li>
+        <strong>Takes over JSON pages automatically</strong>
+        <span>— when the content type and the body both look like JSON. One click returns
+        you to the raw document, and a toolbar action formats any page on demand.</span>
+      </li>
+      <li>
+        <strong>Searches the whole document</strong>
+        <span>— case, whole word and regex, with a match count. It reaches folded and
+        off-screen content, which the browser's own find cannot.</span>
+      </li>
+      <li>
+        <strong>Structure panel</strong>
+        <span>— a navigable tree with type icons and counts. Copy any value, or copy a
+        path as JSONPath, dot or bracket notation, from any row.</span>
+      </li>
+      <li>
+        <strong>Reads malformed files too</strong>
+        <span>— broken JSON still renders, with the first error marked at its exact line
+        and column instead of a blank page.</span>
+      </li>
+      <li>
+        <strong>JSON, JSONC and JSON Lines</strong>
+        <span>— NDJSON streams fold into a single array view with a record count.</span>
+      </li>
+      <li>
+        <strong>Byte-exact by design</strong>
+        <span>— read-only, and copying preserves the original bytes. Number precision,
+        key order and duplicate keys are never rewritten.</span>
+      </li>
+      <li>
+        <strong>Dark and light themes</strong>
+        <span>— switched live, synced across your Chrome profiles, with adjustable editor
+        type.</span>
+      </li>
+      <li>
+        <strong>Local files</strong>
+        <span>— works on <code>file://</code> JSON once you allow file access, or just
+        drop a file into the viewer.</span>
+      </li>
+    </ul>
+  </div>
+
+  <h2>Privacy</h2>
+  <div class="card">
+    <p style="margin:0">
+      Bonsai collects nothing. No analytics, no telemetry, no servers, no remote code —
+      every document is parsed and rendered on your own machine and never leaves it. The
+      only thing stored is your own settings. The full statement is in the
+      <a href="privacy.html">privacy policy</a>.
+    </p>
+  </div>
+
+  <footer>
+    <span>© 2026 DarMa</span>
+    <span><a href="privacy.html">Privacy</a> &middot; <a href="mailto:darmatech.team+bonsai@gmail.com">Contact</a></span>
+  </footer>
+
+</div>
+</body>
+</html>
