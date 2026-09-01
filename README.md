@@ -9,9 +9,28 @@ source code; the extension itself is developed in a separate private repository.
 | File | Purpose |
 |---|---|
 | `index.html` | Landing page — the listing's optional Homepage URL |
+| `examples.html` | Sample JSON documents to try the extension on |
 | `privacy.html` | Privacy policy — **required** by the Chrome Web Store listing |
 | `style.css` | Shared styling; palette copied from the extension's dark theme |
 | `favicon.svg` | The Bonsai brand mark, identical to the one shipped in the extension |
+| `examples/*.json` | The sample documents themselves, served as real JSON URLs |
+
+## Examples
+
+`examples/` holds six documents, from 3 bytes to 8.7 MB, so anyone can try the
+extension without first finding JSON of their own. GitHub Pages serves them as
+`application/json`, which is what makes the extension take the tab over — so
+these are genuine URLs to test against, not screenshots.
+
+They are maintained in the extension repository under its own `examples/`
+directory and copied here; the two large ones are generated:
+
+```sh
+node scripts/gen-examples.mjs --out ../bonsai-site/examples   # long.json, very-long.json
+```
+
+Keep `examples.html` in step with the directory: it states each file's size and
+line count.
 
 ## Publishing
 

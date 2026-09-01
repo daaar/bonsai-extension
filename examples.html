@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Try it — Bonsai JSON Tree Viewer</title>
+<meta name="description" content="Sample JSON documents for trying the Bonsai JSON Tree Viewer Chrome extension — mixed content, arrays, an empty document, a malformed one, and files up to 8.7 MB.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap doc">
+
+  <a class="back" href="index.html">&larr; Bonsai</a>
+
+  <h1>Try it</h1>
+  <p class="date">Sample documents &nbsp;·&nbsp; open any of them in a tab</p>
+
+  <div class="callout">
+    <p>
+      Each link below is an ordinary JSON URL. With Bonsai installed, opening one hands you
+      the viewer — folding, the structure tree, real search. Without it, you get exactly
+      what your browser has always shown you, which is rather the point. Open a couple of
+      them both ways.
+    </p>
+  </div>
+
+  <h2>The documents</h2>
+  <div class="card">
+    <ul class="examples">
+      <li>
+        <div class="ex-head">
+          <a class="ex-name" href="examples/general.json">general.json</a>
+          <span class="ex-meta">3 KB · 120 lines</span>
+        </div>
+        <p class="ex-desc">
+          <strong>Mixed content.</strong> Every kind of JSON value in one document: nested
+          objects five deep, arrays, empty containers, <code>null</code>, unicode and
+          right-to-left text, escaped quotes and newlines, keys containing dots, spaces and
+          emoji. Also the numbers that most tools quietly ruin — an integer past
+          <code>2⁵³</code> and a long decimal — which Bonsai shows back to you byte for byte.
+        </p>
+      </li>
+      <li>
+        <div class="ex-head">
+          <a class="ex-name" href="examples/array.json">array.json</a>
+          <span class="ex-meta">6 KB · 12 records</span>
+        </div>
+        <p class="ex-desc">
+          <strong>A top-level array.</strong> The structure panel indexes the rows rather
+          than naming them, so this is the one to try the copy-path actions on: any row
+          gives you its JSONPath, dot or bracket path.
+        </p>
+      </li>
+      <li>
+        <div class="ex-head">
+          <a class="ex-name" href="examples/empty.json">empty.json</a>
+          <span class="ex-meta">3 bytes</span>
+        </div>
+        <p class="ex-desc">
+          <strong>The degenerate case.</strong> A single empty object. Small, but the kind
+          of document a viewer can easily render as a blank page.
+        </p>
+      </li>
+      <li>
+        <div class="ex-head">
+          <a class="ex-name" href="examples/malformed.json">malformed.json</a>
+          <span class="ex-meta">863 bytes</span>
+        </div>
+        <p class="ex-desc">
+          <strong>Deliberately broken.</strong> Missing commas, single quotes, a trailing
+          comma, an unclosed bracket. It still renders, with the first error marked at its
+          exact line and column — instead of the blank page you would otherwise be
+          debugging.
+        </p>
+      </li>
+      <li>
+        <div class="ex-head">
+          <a class="ex-name" href="examples/long.json">long.json</a>
+          <span class="ex-meta">1.9 MB · 79,059 lines</span>
+        </div>
+        <p class="ex-desc">
+          <strong>A long document.</strong> An event log of 2,000 records — the size at
+          which a raw browser tab stops being usable and scrolling to find anything becomes
+          hopeless. Fold the <code>events</code> array, then search the whole file for
+          <code>PaymentDeclined</code>.
+        </p>
+      </li>
+      <li>
+        <div class="ex-head">
+          <a class="ex-name" href="examples/very-long.json">very-long.json</a>
+          <span class="ex-meta">8.7 MB · 355,746 lines</span>
+        </div>
+        <p class="ex-desc">
+          <strong>A very long document.</strong> The same log with 9,000 records. Rendering
+          is virtualized and search is time-budgeted, so folding, jumping through the tree
+          and searching stay responsive at a size where a browser tab normally does not.
+          This is the one to judge the extension on.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <h2>Things worth trying</h2>
+  <div class="card">
+    <ul class="features">
+      <li>
+        <strong>Search past the fold</strong>
+        <span>— open <code>very-long.json</code>, collapse everything, then search. Matches
+        inside folded and off-screen content still count, which the browser's own find
+        cannot do.</span>
+      </li>
+      <li>
+        <strong>Copy a path</strong>
+        <span>— right-click any row in the structure panel and copy it as JSONPath, dot or
+        bracket notation, ready to paste into code.</span>
+      </li>
+      <li>
+        <strong>Go back to the raw document</strong>
+        <span>— one click returns the tab to the original bytes, unchanged.</span>
+      </li>
+      <li>
+        <strong>Save one and open it locally</strong>
+        <span>— these work just as well from <code>file://</code> once you allow file
+        access, or drop the file straight into the viewer.</span>
+      </li>
+    </ul>
+  </div>
+
+  <p style="color:var(--muted);font-size:14px">
+    The data is synthetic: no real people, orders or payments are described in any of these
+    files.
+  </p>
+
+  <footer>
+    <span>© 2026 DarMa</span>
+    <span><a href="index.html">Bonsai</a> &middot; <a href="privacy.html">Privacy</a></span>
+  </footer>
+
+</div>
+</body>
+</html>

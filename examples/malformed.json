@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "generator": "json-display error fixture",
+    "note": "This document is intentionally malformed to exercise error recovery.",
+    "version": "1.0.0"
+  },
+  "server": {
+    "host": "localhost",
+    "port": 8080
+    "protocol": "https",
+    "retries": 3,
+    "timeoutMs": 30000
+  },
+  "features": {
+    "search": true,
+    "diff": false,
+    "themes": ['dark', 'light', 'system'],
+    "experimental": true,
+  },
+  "database": {
+    "url": "postgres://user:pass@localhost:5432/app",
+    "poolSize": 10,
+    "readReplicas": [
+      "replica-1.internal",
+      "replica-2.internal",
+    ]
+  },
+  "users": [
+    { "id": 1, "name": "Ada", "active": true },
+    { "id": 2, "name": "Björk" "active": false },
+    { "id": 3, "name": "Chen", "active": }
+  ],
+  "limits": {
+    "maxUpload": 10485760,
+    "allowedTypes": ["json", "jsonc", "geojson"
+  }
+}

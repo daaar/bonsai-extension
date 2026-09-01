@@ -91,7 +91,7 @@ h2 {
 .features strong { color: var(--fg); font-weight: 600; }
 .features span { color: var(--muted); }
 
-/* ---------- privacy page ---------- */
+/* ---------- document pages (privacy, examples) ---------- */
 .doc h1 { font-size: 28px; margin: 0 0 6px; font-family: var(--ui); font-weight: 600; }
 .doc .date { color: var(--muted); font-size: 14px; margin: 0 0 36px; }
 .doc h2 {
@@ -122,6 +122,25 @@ code {
   border-radius: 5px;
   color: var(--key);
 }
+
+/* ---------- examples page ---------- */
+.examples { list-style: none; padding: 0; margin: 0; }
+.examples li { padding: 15px 0; border-bottom: 1px solid var(--panel-border); }
+.examples li:first-child { padding-top: 4px; }
+.examples li:last-child { padding-bottom: 4px; border-bottom: 0; }
+.ex-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 16px;
+  flex-wrap: wrap;
+}
+.ex-name { font-family: var(--mono); font-size: 15px; text-decoration: none; }
+.ex-name:hover { text-decoration: underline; }
+/* Sizes and counts read as data, not prose — same face as the filename. */
+.ex-meta { font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
+.ex-desc { margin: 7px 0 0; color: var(--muted); }
+.ex-desc strong { color: var(--fg); font-weight: 600; }
 
 /* ---------- misc ---------- */
 a { color: var(--accent); }

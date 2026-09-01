@@ -1,0 +1,120 @@
+{
+  "$schema": "https://example.com/schemas/release-manifest.json",
+  "project": {
+    "name": "bonsai",
+    "displayName": "Bonsai — JSON Tree Viewer",
+    "description": "A read-only, editor-style JSON viewer for Chrome.",
+    "keywords": ["json", "jsonc", "ndjson", "viewer", "chrome", "devtools"],
+    "homepage": "https://daaar.github.io/bonsai-extension/",
+    "license": "MIT",
+    "private": true
+  },
+  "release": {
+    "version": "1.0.0",
+    "channel": "stable",
+    "publishedAt": "2026-09-01T09:30:00Z",
+    "notes": "First public release.\nFolding, a structure tree and full-document search.",
+    "prerelease": false,
+    "yanked": false,
+    "supersedes": null,
+    "signature": {
+      "algorithm": "ed25519",
+      "keyId": "0x4f3a9c21",
+      "value": "MEUCIQDf7bA1c2xk9pQ0mZr8YvKtNwLh3JeSgH+2VbXoRuTyAAIgL9nQ0kWpC4mR8sT1uV6xYzA3bDeF5gH7iJkLmNoPqRs="
+    }
+  },
+  "build": {
+    "target": "chrome",
+    "manifestVersion": 3,
+    "reproducible": true,
+    "durationSeconds": 12.48,
+    "sizes": {
+      "bundleBytes": 1348572,
+      "gzipBytes": 412990,
+      "compressionRatio": 0.3063
+    },
+    "warnings": [],
+    "artifacts": [
+      {
+        "path": "dist/bonsai-1.0.0-chrome.zip",
+        "bytes": 1348572,
+        "sha256": "9f2b1c7d4e6a8035bf1e2d3c4a5b6c7d8e9f0a1b2c3d4e5f60718293a4b5c6d7"
+      },
+      {
+        "path": "dist/THIRD_PARTY_NOTICES.txt",
+        "bytes": 39621,
+        "sha256": "1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809"
+      }
+    ]
+  },
+  "dependencies": {
+    "runtime": {
+      "@codemirror/view": "6.43.0",
+      "preact": "10.29.2",
+      "jsonc-parser": "3.3.1"
+    },
+    "development": {},
+    "optional": []
+  },
+  "telemetry": {
+    "enabled": false,
+    "endpoint": null,
+    "eventsCollected": 0
+  },
+  "numbers": {
+    "zero": 0,
+    "negative": -273,
+    "float": 3.141592653589793,
+    "scientificLarge": 6.02214076e23,
+    "scientificSmall": 1.602176634e-19,
+    "maxSafeInteger": 9007199254740991,
+    "beyondSafeInteger": 9007199254740993,
+    "highPrecision": 0.1000000000000000055511151231257827
+  },
+  "strings": {
+    "empty": "",
+    "withQuotes": "the field is called \"version\"",
+    "withBackslash": "C:\\Users\\bonsai\\manifest.json",
+    "withNewlines": "line one\nline two\nline three",
+    "withTabs": "name\tversion\tlicense",
+    "unicode": "🌲 bonsai 🎋 盆栽 растение",
+    "rightToLeft": "مرحبا بالعالم שלום עולם",
+    "url": "https://example.com/path?query=value&other=123#fragment",
+    "looksLikeJson": "{\"this\":\"is a string, not an object\",\"n\":42}"
+  },
+  "awkwardKeys": {
+    "": "an empty key is legal JSON",
+    "key with spaces": 1,
+    "key.with.dots": 2,
+    "key/with/slashes": 3,
+    "key\"with\"quotes": 4,
+    "ключ": "non-ASCII key",
+    "🔑": "emoji key"
+  },
+  "maintainers": [
+    {
+      "name": "DarMa",
+      "email": "darmatech.team+bonsai@gmail.com",
+      "roles": ["author", "publisher"],
+      "since": "2026-07-28"
+    }
+  ],
+  "emptyContainers": {
+    "object": {},
+    "array": [],
+    "nested": { "a": {}, "b": [], "c": "" }
+  },
+  "deeplyNested": {
+    "level1": {
+      "level2": {
+        "level3": {
+          "level4": {
+            "level5": {
+              "value": "collapse me from the structure panel"
+            }
+          }
+        }
+      }
+    }
+  }
+}
