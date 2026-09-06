@@ -94,7 +94,7 @@
   "maintainers": [
     {
       "name": "DarMa",
-      "email": "darma.coding+bonsai@gmail.com",
+      "email": "maintainer@example.com",
       "roles": ["author", "publisher"],
       "since": "2026-07-28"
     }
