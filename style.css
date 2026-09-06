@@ -65,9 +65,16 @@ body {
   font-size: 14px;
   transition: background-color 0.15s cubic-bezier(0.2, 0, 0, 1), border-color 0.15s;
 }
+/* The site-wide `a:hover` rule (0,1,1) outranks `.btn`'s own colour (0,1,0),
+   so every interactive state has to restate the text colour or the label
+   turns blue — invisible on the primary button's blue fill. */
+.btn:hover, .btn:active { color: var(--fg); }
 .btn:hover { background: var(--panel-hover); }
+.btn:active { background: var(--panel-border); }
 .btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 500; }
+.btn-primary:hover, .btn-primary:active { color: #fff; }
 .btn-primary:hover { background: #0a89dd; border-color: #0a89dd; }
+.btn-primary:active { background: #0a6ba8; border-color: #0a6ba8; }
 .btn[aria-disabled='true'] { opacity: 0.55; cursor: default; pointer-events: none; }
 
 /* ---------- content ---------- */
