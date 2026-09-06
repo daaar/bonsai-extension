@@ -41,8 +41,8 @@ GitHub Pages serves the `main` branch from the repository root
 listed.** If it starts returning 404, the Web Store listing can be taken down.
 Do not rename `privacy.html` or make this repository private.
 
-## After the extension is published
+## Web Store listing
 
-`index.html` has a placeholder call-to-action marked with a `TODO` comment.
-Replace its `href` with the real Chrome Web Store URL and remove the
-`aria-disabled` attribute and the "coming soon" wording.
+The call-to-action in `index.html` points at the live listing:
+
+<https://chromewebstore.google.com/detail/bonsai-%E2%80%94-json-tree-viewer/gpnejcdhjlianokfhhnonmkgabkmcnoe>
