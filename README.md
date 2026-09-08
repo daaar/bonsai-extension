@@ -1,7 +1,7 @@
 # bonsai-extension
 
-Public homepage and privacy policy for the **Bonsai — JSON Tree Viewer** Chrome
-extension, served via GitHub Pages.
+Public homepage, privacy policy and terms of use for the **Bonsai — JSON Tree
+Viewer** Chrome extension, served via GitHub Pages.
 
 This repository is intentionally documentation only. It contains no extension
 source code; the extension itself is developed in a separate private repository.
@@ -11,6 +11,7 @@ source code; the extension itself is developed in a separate private repository.
 | `index.html` | Landing page — the listing's optional Homepage URL |
 | `examples.html` | Sample JSON documents to try the extension on |
 | `privacy.html` | Privacy policy — **required** by the Chrome Web Store listing |
+| `terms.html` | Terms of use — the licence grant, warranty disclaimer and liability limit |
 | `style.css` | Shared styling; palette copied from the extension's dark theme |
 | `favicon.svg` | The Bonsai brand mark, identical to the one shipped in the extension |
 | `examples/*.json` | The sample documents themselves, served as real JSON URLs |
@@ -39,7 +40,8 @@ GitHub Pages serves the `main` branch from the repository root
 
 **The privacy policy URL must keep working for as long as the extension is
 listed.** If it starts returning 404, the Web Store listing can be taken down.
-Do not rename `privacy.html` or make this repository private.
+Do not rename `privacy.html` or make this repository private. The same applies to
+`terms.html` once the listing description links it.
 
 ## Web Store listing
 
